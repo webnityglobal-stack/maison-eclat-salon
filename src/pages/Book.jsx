@@ -147,10 +147,10 @@ export default function Book() {
               <label className="text-[9px] uppercase tracking-widest">
                 Preferred date
 
-                <span className="flex items-center">
+                <span className="flex items-center relative">
                   <CalendarDays
-                    size={15}
-                    className="text-gold absolute ml-3"
+                    size={16}
+                    className="text-gold absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none z-10"
                   />
 
                   <input
@@ -160,7 +160,8 @@ export default function Book() {
                     name="date"
                     value={form.date}
                     onChange={change}
-                    className="field pl-10"
+                    className="field"
+                    style={{ paddingLeft: '45px' }}
                   />
                 </span>
               </label>
@@ -168,10 +169,10 @@ export default function Book() {
               <label className="text-[9px] uppercase tracking-widest">
                 Preferred time
 
-                <span className="flex items-center">
+                <span className="flex items-center relative">
                   <Clock
-                    size={15}
-                    className="text-gold absolute ml-3"
+                    size={16}
+                    className="text-gold absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none z-10"
                   />
 
                   <select
@@ -179,7 +180,8 @@ export default function Book() {
                     name="time"
                     value={form.time}
                     onChange={change}
-                    className="field pl-10"
+                    className="field"
+                    style={{ paddingLeft: '45px' }}
                   >
                     <option value="">Choose a time</option>
 
